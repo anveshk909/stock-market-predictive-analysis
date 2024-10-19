@@ -12,3 +12,4 @@ flask
 numpy
 joblib
 streamlit
+ipykernel
