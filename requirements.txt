@@ -1,0 +1,14 @@
+pandas
+numpy
+matplotlib
+seaborn
+yfinance
+scikit-learn
+shap
+tensorflow
+joblib
+imbalanced-learn
+flask
+numpy
+joblib
+streamlit
