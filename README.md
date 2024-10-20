@@ -505,14 +505,10 @@ Stock-Market-Predictive-Analysis/
 │   ├── AAPL.csv
 │   ├── GOOGL.csv
 │   ├── AMZN.csv
-├── smpa.ipynb
-│   
-├── api/
-│   └── api.py
-├── streamlit_app/
-│   └── smpaui.py
+├── smpa.ipynb  
+├── api.py
+├── smpaui.py
 ├── README.md
-├── Final_Report.md
 ├── requirements.txt
 └── .gitignore
 ```
