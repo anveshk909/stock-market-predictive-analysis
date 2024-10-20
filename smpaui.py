@@ -1,4 +1,4 @@
-# Example: Improved Streamlit App
+# Streamlit App
 
 import streamlit as st
 import joblib
@@ -23,15 +23,15 @@ except FileNotFoundError:
 
 st.title('Stock Price Movement Predictor')
 
-# Collect user input with validation
-MA10 = st.number_input('MA10 (10-day Moving Average)', min_value=0.0, max_value=1000.0, step=0.01, help="10-day moving average of the stock price")
-MA50 = st.number_input('MA50 (50-day Moving Average)', min_value=0.0, max_value=1000.0, step=0.01, help="50-day moving average of the stock price")
-RSI = st.number_input('RSI (Relative Strength Index)', min_value=0.0, max_value=100.0, step=0.01, help="Relative Strength Index of the stock")
-BB_upper = st.number_input('BB_upper (Bollinger Band Upper)', min_value=0.0, max_value=1000.0, step=0.01, help="Upper Bollinger Band value")
-BB_lower = st.number_input('BB_lower (Bollinger Band Lower)', min_value=0.0, max_value=1000.0, step=0.01, help="Lower Bollinger Band value")
-Daily_Return = st.number_input('Daily Return', min_value=-1.0, max_value=1.0, step=0.01, help="Daily return of the stock")
-Lagged_Close = st.number_input('Lagged Close', min_value=0.0, max_value=1000.0, step=0.01, help="Previous day's closing price")
-Lagged_Volume = st.number_input('Lagged Volume', min_value=0.0, max_value=1e9, step=1.0, help="Previous day's trading volume")
+# Collect user input with sliders
+MA10 = st.slider('MA10 (10-day Moving Average)', min_value=0.0, max_value=1000.0, step=0.01, help="10-day moving average of the stock price")
+MA50 = st.slider('MA50 (50-day Moving Average)', min_value=0.0, max_value=1000.0, step=0.01, help="50-day moving average of the stock price")
+RSI = st.slider('RSI (Relative Strength Index)', min_value=0.0, max_value=100.0, step=0.01, help="Relative Strength Index of the stock")
+BB_upper = st.slider('BB_upper (Bollinger Band Upper)', min_value=0.0, max_value=1000.0, step=0.01, help="Upper Bollinger Band value")
+BB_lower = st.slider('BB_lower (Bollinger Band Lower)', min_value=0.0, max_value=1000.0, step=0.01, help="Lower Bollinger Band value")
+Daily_Return = st.slider('Daily Return', min_value=-1.0, max_value=1.0, step=0.01, help="Daily return of the stock")
+Lagged_Close = st.slider('Lagged Close', min_value=0.0, max_value=1000.0, step=0.01, help="Previous day's closing price")
+Lagged_Volume = st.slider('Lagged Volume', min_value=0.0, max_value=1e9, step=1.0, help="Previous day's trading volume")
 
 features = np.array([MA10, MA50, RSI, BB_upper, BB_lower, Daily_Return, Lagged_Close, Lagged_Volume]).reshape(1, -1)
 
