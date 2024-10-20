@@ -394,16 +394,6 @@ flask
 streamlit
 ```
 
-### Running the Jupyter Notebook
-
-Launch Jupyter Notebook to explore and run the analysis:
-
-```bash
-jupyter notebook notebooks/Stock_Market_Predictive_Analysis.ipynb
-```
-
-**Alternatively**, you can navigate to the `notebooks/` directory and open the notebook manually through the Jupyter interface.
-
 **Key Steps in the Notebook:**
 
 1. **Data Collection:** Downloads and saves data in the `data/` directory.
@@ -515,12 +505,12 @@ Stock-Market-Predictive-Analysis/
 │   ├── AAPL.csv
 │   ├── GOOGL.csv
 │   ├── AMZN.csv
-├── notebooks/
-│   └── Stock_Market_Predictive_Analysis.ipynb
+├── smpa.ipynb
+│   
 ├── api/
 │   └── api.py
 ├── streamlit_app/
-│   └── app.py
+│   └── smpaui.py
 ├── README.md
 ├── Final_Report.md
 ├── requirements.txt
